@@ -26,6 +26,11 @@ def log(log_message):
         "chat_id": log_channel_id,
         "text": log_message
     })
+    if log.status_code == 200:
+        print('log registered')
+    else:
+        print('Error in registering log:', log.status_code)
+
 def write_list_to_file(my_list, file_path):
     with open(file_path, 'w') as file:
         for item in my_list:
