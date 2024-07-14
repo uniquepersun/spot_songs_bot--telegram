@@ -6,6 +6,7 @@ from telebot import types
 import re
 from spotipy.oauth2 import SpotifyClientCredentials
 import spotipy
+from bs4 import BeautifulSoup
 
 dotenv.load_dotenv()
 
@@ -148,6 +149,20 @@ def send_welcome(message):
 @bot.message_handler(commands=['help'])
 def send_help(message):
     bot.reply_to(message, "For any query, see the repository at:https://github.com/uniquepersun")
+
+@bot.message_handler(commands=['ping'])
+def ping(message):
+    bot.reply_to(message, "pong!!")
+@bot.message_handler(commands=['search'])
+def search_song(message):
+    url = "https://open.spotify.com/search/" + message
+    a = requests.get(url)
+    soup = BeautifulSoup(a.content, 'html.parser')
+    b = soup.find('div',{})
+    c = soup.find('a',{'class':'XLAiqekZxk4Z7Nok9a58'})
+    keyboard = types.InlineKeyboardButton(b)
+    try_to_delete_message(message.chat.id, "Okay, wait and watch".message_id)
+    return
     
 @bot.message_handler(regexp=spotify_correct_link)
 def handle_correct_link(message):
