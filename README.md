@@ -2,10 +2,11 @@
  a bot which can let you download songs, playlists, albums from spotify. 👏: 
 
 ## USAGE
-just clone it nd download all the requirements and setup a bot using bot_father in your telegram and set all the credentials nd the etc stuff, You got it :fire: <br>
-- :fire::wink:
+just [clone](https://github.com/uniquepersun/spot_songs_bot--telegram.git) it nd download all the requirements and setup a bot using bot_father in your telegram and set all the credentials nd the etc stuff, You got it :fire: <br>
 
+Here run this command to install all the librarties :fire::wink:
 
+    pip install -r requirements.txt
 
 ### Some screenshots for you:
  bot in testing mode:
@@ -15,7 +16,7 @@ just clone it nd download all the requirements and setup a bot using bot_father 
 :open_hands:
 
 
-## :performing_arts: contact me!! :heart::v:
+## :sunglasses: contact me!! :heart::v:
 uniquepersun on :
 - [X (formerly twitter)](https://x.com/uniquepersun) <br>
 - [instagram](https://instagram.com/uniquepersun) <br>
